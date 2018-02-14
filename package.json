@@ -2,9 +2,12 @@
   "name": "crud",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node /src/server.js",
+    "build": "./node_modules/.bin/babel ./src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devstart": "./node_modules/nodemon/bin/nodemon.js ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,10 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^5.0.4",
-    "path": "^0.12.7"
+    "nodemon": "^1.14.12"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
   }
 }
